@@ -30,3 +30,9 @@ Your input helps make PocketPal AI better for everyone. Here’s how you can con
 
 - **Suggest New Features**: Got an idea for a cool feature? Open an issue as a feature request.
 - **Report Bugs**: Found a bug or something that's not quite ok? Open an issue and we'll dig into it.
+
+## Related Blog Posts:
+
+- https://medium.com/@ghorbani59/pocketpal-ai-tiny-llms-in-the-pocket-6a65d0271a75
+- https://medium.com/@ghorbani59/pocket-sized-ai-the-power-of-tiny-llms-on-my-semi-offline-south-american-journey-2978da543f84
+  
