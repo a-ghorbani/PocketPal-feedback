@@ -2,6 +2,12 @@
 
 Welcome! We're collecting feedback for **PocketPal AI** – the pocket-sized AI assistant powered by tiny language models that run directly on your phone.
 
+## 📚 Documentation
+
+- [Getting Started Guide](docs/getting_started.md)
+
+---
+
 PocketPal AI started as a fun side project, but thanks to your awesome feedback and growing user base, we've decided to create this repo to collect your thoughts! 
 Here you can share your ideas, report issues, try out new builds (for Android), and help shape the app's direction.
 
@@ -12,7 +18,7 @@ Ready to get started? Grab the app from the links below:
 - **iOS**: [Download on the App Store](https://apps.apple.com/us/app/pocketpal-ai/id6502579498)
 - **Android**: Currently only available for registered testers until Google opens it for public access - [Get it on Google Play ](https://play.google.com/store/apps/details?id=com.pocketpalai)
 
-Check out [Getting Started Guide](docs/getting_started.md) for tips on getting up and running.
+But I try to keep [apks](apks/) folder updated with the latest APK build.
 
 ## 🧠 What's Inside?
 
