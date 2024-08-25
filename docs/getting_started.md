@@ -20,7 +20,7 @@ PocketPal AI comes pre-configured with some popular tiny LLMs:
 
 Modells need to be downloaded before use. You can download and use these models directly from the app and load any other GGUF models you like!
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: center;">
     <img src="../assets/models_page.webp" alt="Models Page" style="width: 33%;">
 </div>
 
@@ -33,7 +33,7 @@ Modells need to be downloaded before use. You can download and use these models 
 - Choose your desired model and hit download
 
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: center;">
     <img src="../assets/add_model_1.webp" alt="Navigate to Models Page" style="width: 33%;">
     <img src="../assets/add_model_2.webp" alt="Download a Model" style="width: 33%;">
     <img src="../assets/add_model_3.webp" alt="Load a Model" style="width: 33%;">
@@ -65,7 +65,7 @@ Click the chevron icon to access advanced LLM settings like:
 - Chat template options
 - etc.
 
-<div style="display: flex;">
+<div style="display: flex;  justify-content: center;">
     <img src="../assets/model_config_1.webp" alt="Navigate to Models Page" style="width: 33%;">
     <img src="../assets/model_config_2.webp" alt="Download a Model" style="width: 33%;">
     <img src="../assets/model_load.webp" alt="Load a Model" style="width: 33%;">
@@ -77,7 +77,7 @@ Once your model is loaded, head to the “Chat” page and start conversing with
 
 The generation performance metric is also displayed. If interested, watch the chat bubble for real-time performance metrics: Tokens per second and Milliseconds per token.
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: center;">
     <img src="../assets/chat_1.webp" alt="Navigate to Models Page" style="width: 33%;">
     <img src="../assets/chat_2.webp" alt="Download a Model" style="width: 33%;">
 </div>
