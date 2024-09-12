@@ -21,9 +21,7 @@ Here you can share your ideas, report issues, try out new builds (for Android), 
 Ready to get started? Grab the app from the links below:
 
 - **iOS**: [Download on the App Store](https://apps.apple.com/us/app/pocketpal-ai/id6502579498)
-- **Android**: Currently only available for registered testers until Google opens it for public access - [Get it on Google Play ](https://play.google.com/store/apps/details?id=com.pocketpalai)
-
-But I try to keep [apks](apks/) folder updated with the latest APK build.
+- **Android**: [Get it on Google Play ](https://play.google.com/store/apps/details?id=com.pocketpalai)
 
 ## 🧠 What's Inside?
 
