@@ -2,12 +2,9 @@
 
 ## Installation
 
-iPhone users can grab it here: [PocketPal AI on the App Store](https://apps.apple.com/us/app/pocketpal-ai/id6502579498)
+**iPhone** users can grab it here: [PocketPal AI on the App Store](https://apps.apple.com/us/app/pocketpal-ai/id6502579498)
 
-Android users: Currently only available for registered testers until Google opens it for public access.
-Hopefully, soon, the app will be open at [PocketPal AI on Google Play](https://play.google.com/store/apps/details?id=com.pocketpalai)
-
-But I try to keep [apks](../apks) folder updated with the latest APK build.
+**Android** users can get it from here: [PocketPal AI on Google Play](https://play.google.com/store/apps/details?id=com.pocketpalai)
 
 Note: This is a personal project, so I am working on it in my spare time. It might have bugs and issues, and obviously, I have not tested it on all devices. If you encounter any issues, open an issue, and I’ll investigate whenever I can!
 
@@ -19,6 +16,7 @@ PocketPal AI comes pre-configured with some popular tiny LLMs:
 - Danube 2 and 3
 - Phi
 - Gemma 2
+- Qwen
 
 Modells need to be downloaded before use. You can download and use these models directly from the app and load any other GGUF models you like!
 
