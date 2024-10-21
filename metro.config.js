@@ -1,10 +1,10 @@
 const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
 
-const localPackagePaths = ['/Users/a-ghorbani/code/llama.rn'];
+//const localPackagePaths = ['localpath/code/llama.rn'];
 
 const config = {
   resolver: {
-    nodeModulesPaths: [...localPackagePaths], // update to resolver
+    //nodeModulesPaths: [...localPackagePaths], // update to resolver
   },
   transformer: {
     getTransformOptions: async () => ({
@@ -14,7 +14,7 @@ const config = {
       },
     }),
   },
-  watchFolders: [...localPackagePaths],
+  //watchFolders: [...localPackagePaths],
 };
 
 module.exports = mergeConfig(getDefaultConfig(__dirname), config);

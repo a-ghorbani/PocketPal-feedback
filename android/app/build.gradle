@@ -78,7 +78,7 @@ android {
 
     namespace "com.pocketpal"
     defaultConfig {
-        applicationId "com.pocketpalai"
+        applicationId project.hasProperty('appId') ? project.appId : "com.pocketpalai"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 10 
