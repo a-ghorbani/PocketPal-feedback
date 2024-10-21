@@ -222,6 +222,13 @@ This project is licensed under the [MIT License](LICENSE).
 
 For questions or feedback, please open an issue.
 
+## Acknowledgements
+
+PocketPal AI is built using the amazing work from:
+
+- **[llama.cpp](https://github.com/ggerganov/llama.cpp)**: Enables efficient inference of LLMs on local devices.
+- **[llama.rn](https://github.com/mybigday/llama.rn)**: Implements llama.cpp bindings into React Native.
+
 ---
 
 Happy exploring! 🚀📱✨
