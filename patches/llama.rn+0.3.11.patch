@@ -1,0 +1,10 @@
+diff --git a/node_modules/llama.rn/src/index.ts b/node_modules/llama.rn/src/index.ts
+index 151dd18..3ba4c2d 100644
+--- a/node_modules/llama.rn/src/index.ts
++++ b/node_modules/llama.rn/src/index.ts
+@@ -211,3 +211,5 @@ export async function initLlama({
+ export async function releaseAllLlama(): Promise<void> {
+   return RNLlama.releaseAllContexts()
+ }
++
++export default RNLlama;

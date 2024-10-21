@@ -1,0 +1,81 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  # Job for linting, type checking, unit testing
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      # Step 3: Install dependencies and iOS Pods
+      - name: Install dependencies
+        run: yarn install
+
+      # Step 4: Run linters (ESLint)
+      - name: Run ESLint
+        run: yarn lint
+
+      # Step 5: Run TypeScript type checks
+      - name: Run TypeScript type check
+        run: yarn typecheck
+
+      # Step 6: Run unit tests (Jest)
+      - name: Run unit tests
+        run: yarn test --coverage
+
+  # Job for Android build
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build Android
+        run: yarn build:android
+
+  # Job for iOS build
+  build-ios:
+    runs-on: macos-latest  # macOS runner required for iOS builds
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build iOS
+        run: yarn ios:build

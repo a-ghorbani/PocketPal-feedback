@@ -1,17 +1,18 @@
 # Getting Started
 
+Note: Part of this guide is outdated. It will be updated soon.
+
 ## Installation
 
 **iPhone** users can grab it here: [PocketPal AI on the App Store](https://apps.apple.com/us/app/pocketpal-ai/id6502579498)
 
 **Android** users can get it from here: [PocketPal AI on Google Play](https://play.google.com/store/apps/details?id=com.pocketpalai)
 
-Note: This is a personal project, so I am working on it in my spare time. It might have bugs and issues, and obviously, I have not tested it on all devices. If you encounter any issues, open an issue, and I’ll investigate whenever I can!
+Note: This is a personal project, so I am working on it in my spare time. It might have bugs and issues, and obviously, I have not tested it on all devices. If you encounter any issues, open an issue, or even better, contribute to the project!
 
-For those interested in a more professional alternative, check out H2O.ai’s app: [H2O AI Personal GPT](https://apps.apple.com/us/app/h2o-ai-personal-gpt/id6504365990).
 
 ### Available Models
-PocketPal AI comes pre-configured with some popular tiny LLMs:
+PocketPal AI comes pre-configured with some popular SLMs:
 
 - Danube 2 and 3
 - Phi
