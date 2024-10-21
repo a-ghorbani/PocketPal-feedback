@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: yarn install
+
+      # Step 4: Run release-please to create a release PR with version bump and changelog
+      - name: Run release-please
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: your-app-name
+
+      # Step 5: Sync iOS and Android versions using react-native-version
+      - name: Sync iOS and Android versions
+        run: |
+          CURRENT_VERSION=$(cat package.json | grep version | head -n 1 | awk -F: '{ print $2 }' | sed 's/[",]//g')
+          yarn react-native-version --target $CURRENT_VERSION
+
+      # Step 6: Commit the iOS and Android version bumps
+      - name: Commit version updates
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "chore(release): sync iOS and Android versions"
+          git push origin main
