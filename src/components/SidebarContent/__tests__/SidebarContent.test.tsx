@@ -53,7 +53,7 @@ describe('SidebarContent Component', () => {
   it('navigates to Chat screen when a session is pressed', () => {
     const {getByText, queryByText} = render(<TestNavigator />);
 
-    // Navigate to a differnet page (as the defualt is chat screen)
+    // Navigate to a differnet page (as the default is chat screen)
     fireEvent.press(getByText('Models'));
     expect(queryByText('Chat Screen')).toBeNull();
     expect(getByText('Models Screen')).toBeTruthy();
