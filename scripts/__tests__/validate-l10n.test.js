@@ -26,8 +26,8 @@ function runWithLocales(overrides = {}) {
   fs.mkdirSync(tmpLocalesDir);
 
   try {
-    // Copy en.json plus one JSON per wired registry locale. A failed
-    // registry extraction must fail the test, not yield an empty fixture.
+    // A failed registry extraction must fail the test, not silently yield
+    // an empty fixture.
     expect(WIRED_LANGUAGES).not.toBeNull();
     for (const filename of [
       'en.json',
