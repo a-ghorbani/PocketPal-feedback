@@ -112,9 +112,7 @@ async function getProjectStats() {
   }
 }
 
-async function main() {
-  const command = process.argv[2];
-
+function requireRegistryLanguages() {
   const languages = extractRegistryLanguages(
     fs.readFileSync(INDEX_PATH, 'utf-8'),
   );
@@ -124,18 +122,26 @@ async function main() {
     );
     process.exit(1);
   }
+  return languages;
+}
+
+async function main() {
+  const command = process.argv[2];
 
   switch (command) {
     case 'upload':
       await uploadSourceFile();
       break;
     case 'download':
-      await downloadTranslations(languages);
+      await downloadTranslations(requireRegistryLanguages());
       break;
-    case 'sync':
+    case 'sync': {
+      // Resolved before the upload so a bad registry costs no network call.
+      const languages = requireRegistryLanguages();
       await uploadSourceFile();
       await downloadTranslations(languages);
       break;
+    }
     case 'stats':
       await getProjectStats();
       break;

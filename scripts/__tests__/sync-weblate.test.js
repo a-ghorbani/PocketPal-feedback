@@ -109,4 +109,19 @@ describe('sync-weblate.js registry guard', () => {
     const result = runWithIndex(ONLY_EN_INDEX, 'sync');
     expectGuarded(result);
   });
+
+  it('download proceeds on the real registry', () => {
+    const result = runWithIndex(
+      fs.readFileSync(path.join(LOCALES_DIR, 'index.ts'), 'utf-8'),
+      'download',
+    );
+    expect(result.output).not.toContain('Could not parse languageRegistry');
+    expect(result.output).toMatch(/Failed to download \w+\.json/);
+  });
+
+  it('upload does not consult the registry', () => {
+    const result = runWithIndex(GARBAGE_INDEX, 'upload');
+    expect(result.output).not.toContain('Could not parse languageRegistry');
+    expect(result.output).toContain('Failed to upload source file');
+  });
 });
