@@ -71,6 +71,19 @@ describe('extractRegistryLanguages', () => {
     expect(extractRegistryLanguages(source)).toBeNull();
   });
 
+  it('returns null when an entry key is quoted', () => {
+    const singleQuoted = [
+      'const languageRegistry = {',
+      '  en: {displayName: "English (EN)"},',
+      "  'pt-BR': {displayName: 'Português (PT-BR)'},",
+      '  fa: {displayName: "فارسی (FA)"},',
+      '} as const;',
+    ].join('\n');
+    const doubleQuoted = singleQuoted.replace("'pt-BR'", '"pt-BR"');
+    expect(extractRegistryLanguages(singleQuoted)).toBeNull();
+    expect(extractRegistryLanguages(doubleQuoted)).toBeNull();
+  });
+
   it('returns null when the registry body is empty', () => {
     expect(
       extractRegistryLanguages('const languageRegistry = {} as const;'),
