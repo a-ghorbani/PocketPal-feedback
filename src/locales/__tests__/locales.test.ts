@@ -297,7 +297,7 @@ describe('type safety', () => {
   it('keyof typeof l10n resolves to literal union', () => {
     // At runtime we verify the keys match
     const keys: Array<keyof typeof l10n> = ALL_LANGUAGES;
-    expect(Object.keys(l10n).sort()).toEqual(keys.sort());
+    expect(Object.keys(l10n).sort()).toEqual([...keys].sort());
 
     // This would cause a compile error if the type were wrong:
     const lang: keyof typeof l10n = 'en';
